@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sir bravin | Projects You Can Use</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #3b82f6;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        
+        .logo span {
+            color: #1e40af;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-top: 5px;
+        }
+        
+        .see-more {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .see-more:hover {
+            color: #1d4ed8;
+        }
+        
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #e2e8f0;
+            margin: 30px 0;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #3b82f6;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .project-features {
+            list-style-type: none;
+            margin: 20px 0;
+        }
+        
+        .project-features li {
+            margin-bottom: 12px;
+            padding-left: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .project-features li i {
+            color: #3b82f6;
+            margin-top: 3px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background-color: #10b981;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        
+        .tag {
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border: 1px solid #dbeafe;
+        }
+        
+        .tag:hover {
+            background-color: #dbeafe;
+        }
+        
+        .apps-store {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #10b981;
+        }
+        
+        .apps-store .section-title {
+            color: #065f46;
+        }
+        
+        .download-link {
+            display: inline-block;
+            background-color: #10b981;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .download-link:hover {
+            background-color: #059669;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .project-title {
+                font-size: 1.5rem;
+            }
+            
+            .project-card, .apps-store {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">sir <span>bravin</span></div>
+            <p>Open source projects and digital solutions</p>
+        </header>
+        
+        <div class="section-header">
+            <div>
+                <h1 class="section-title">Projects You Can Use</h1>
+                <p class="section-subtitle">Open source projects and repositories</p>
+            </div>
+            <a href="#" class="see-more">See More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <hr>
+        
+        <div class="project-card">
+            <h2 class="project-title">
+                <i class="fas fa-robot"></i> sir bravin GO BOT
+            </h2>
+            
+            <ul class="project-features">
+                <li>
+                    <i class="fas fa-code"></i>
+                    <span><strong>sir bravin Smart assistant</strong> for tech, tools & APIs</span>
+                </li>
+                <li>
+                    <i class="fas fa-globe"></i>
+                    <span><strong>Web solutions & automation</strong> for your business needs</span>
+                </li>
+                <li>
+                    <i class="fas fa-clock"></i>
+                    <span><strong>Available 24/7</strong> for your digital needs</span>
+                </li>
+            </ul>
+            
+            <div class="status-badge">Active</div>
+            
+            <div class="tags">
+                <a href="#" class="tag">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Bot
+                </a>
+                <a href="#" class="tag">
+                    <i class="fab fa-js-square"></i> JavaScript
+                </a>
+                <a href="#" class="tag">
+                    <i class="fas fa-brain"></i> AI Assistant
+                </a>
+            </div>
+        </div>
+        
+        <div class="section-header">
+            <div>
+                <h1 class="section-title">Websites We Built</h1>
+                <p class="section-subtitle">Web applications and online tools</p>
+            </div>
+            <a href="#" class="see-more">See More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <hr>
+        
+        <div class="section-header">
+            <div>
+                <h1 class="section-title">Things You Never Knew</h1>
+                <p class="section-subtitle">sir bravin Apps Store</p>
+            </div>
+        </div>
+        
+        <div class="apps-store">
+            <h2 class="section-title">Discover Our Applications</h2>
+            <p>Access a wide range of tools and applications developed by sir bravin for various digital needs.</p>
+            <a href="#" class="download-link">
+                <i class="fas fa-download"></i> Download all sir bravin applications
+            </a>
+        </div>
+        
+        <footer>
+            <p>&copy; 2023 sir bravin All rights reserved. | Open source projects and digital solutions</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effect to project cards
+            const projectCard = document.querySelector('.project-card');
+            const tags = document.querySelectorAll('.tag');
+            const seeMoreLinks = document.querySelectorAll('.see-more');
+            
+            // Add click effects to tags
+            tags.forEach(tag => {
+                tag.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                });
+            });
+            
+            // Add click effects to see more links
+            seeMoreLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('This would navigate to more projects in a real implementation.');
+                });
+            });
+            
+            // Make download link interactive
+            const downloadLink = document.querySelector('.download-link');
+            if (downloadLink) {
+                downloadLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Download would start in a real implementation. Thank you for your interest Sir bravin applications!');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
